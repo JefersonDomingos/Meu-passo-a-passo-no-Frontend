@@ -1,0 +1,17 @@
+- INFORMAÇÕES IMPORTANTES DO HTML
+
+- A metatag viewport, faz uma escala baseada na tela do seu dispositivo, por exemplo uma fonte 
+24px no PC não pode ter exatamente o mesmo tamanho na tela do Celular. pois os 24px do computa-
+dor é maior que os 24px do celular, a julgar pelo tamanho das telas.
+
+
+-TAGS semânticas:
+
+<header> tag de cabeçalho
+<main> tag de conteudo principal
+<footer> tag de rodapé
+
+<strong> para destacar e personalizar apenas alguma parte do texto
+
+
+

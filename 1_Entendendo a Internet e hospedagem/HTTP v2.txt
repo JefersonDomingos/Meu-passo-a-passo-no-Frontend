@@ -1,0 +1,10 @@
+HTTP2 - Dados binários, GZIP ativo e TLS
+
+- Mantém a base do HTTP/1.1, porém contém novas soluções;
+- Cripitografa os dados através do GZIP,
+- Possui um PATCH que deixa as informações do cabeçalho mais leves ou seja menores;
+- Usa o TLS para uma camada a mais de segurança;
+- O HTTPS se torna obrigatorio no HTTP2;
+- É Statefull ou seja informações do cabeçalho não são repetidas a cada requisição como é no HTTP1;
+- É multiplexing ou seja não é necessário ficar esperando a RESPOSTA de uma REQUISIÇÃO para enviar
+outra, o usuário pode ir fazendo requisições antes de receber a RESPOSTA da anterior.

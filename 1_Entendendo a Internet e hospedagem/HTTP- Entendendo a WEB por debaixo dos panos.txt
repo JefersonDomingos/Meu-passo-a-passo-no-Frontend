@@ -1,0 +1,84 @@
+CLIENTE <---------- Protocolo HTTP -------------> SERVIDOR
+
+-O significado da sigla HTTP é Hypertext Transfer Protocol.
+-O navegador é o cliente, o que nos fornece o conteúdo é o servidor.
+-o HTTP foi feito para estabelecer regras de comunicação entre o modelo Cliente-Servidor que funciona na Web.
+
+PROTOCOLOS :
+-HTTP: HTTP é o protocolo mais importante da Internet
+-FTP: File Transport Protocol, protocolo para transferir arquivos,
+-BitTorrent: Além de ser um protocolo, também é um aplicativo para troca de arquivos na internet.
+-SMTP: Simple Mail Transfer Protocol, protocolo para enviar e-mails.
+
+VEJA O SITE DA ALURA: Cliente  <--- HTTP ---> Servidor JAVA  <--- SQL ---> Banco de dados
+
+O Protocolo HTTP funciona por request <--> response ou seja requisição e resposta,
+A Requisição sempre é feita inicialmente pelo cliente.
+ele também é do tipo stateless(Não mantem as informações entre as requisições).
+
+Para manter as informações do usuário, usamos uma SESSÃO que serve para armazenar uma chave que é 
+repetida em cada requisição. Sessão é o tempo em que o usuário utiliza a aplicação web.
+
+Os Cookies são usados para armazenar as preferências de um usuário ao visitar sites por exemplo se você 
+escolher a linguagem PT-BR, isso ficará armazenado no seu navegador e quando entrar novamente no site a sua 
+preferência logo será aplicada automaticamente por meio dos cookies. 
+
+Os Cookies também podem ser usados para mostrar propagandas sugerindo aquele item que você mais pesquisa para uma
+compra por exemplo.
+
+Vejamos um exemplo de conexão, a telnet
+
+Requisição:
+GET / HTTP/1.1           /// O método HTTP dessa requisição foi o "GET".
+HOST: www.caelum.com.br
+
+Resposta:
+HTTP/1.1 200 OK         /// O código de resposta foi o "200", que indica tudo certo.
+Content-Type: text/html; charset=utf-8
+
+Status Code:
+
+2XX : OK,
+3XX : Redirecionamento url mudada,
+4XX : Erro na requisição do cliente. busca incorreta, erros de digitação,
+5XX : Erro do lado do servidor.
+     
+protocolo     |      domínio         |      recurso
+HTTPS://           alura.com.br/            frontend.html
+
+Parâmetros de uma Requisição:
+
+POST -> É o método que o usuário "ENVIA" seus dados, este método "não exibe" os dados na URL do Browser.
+GET -> É o método que o usuário  "BUSCA" seus dados do servidor e esses são "exibidos" na URL Do Browser.
+DELETE -> Apagar os dados
+PUT/PATCH -> Atualizar os dados
+
+Quando usamos mais do que, um parâmetro devemos usar & para separá-los:
+
+?nome_do_parametro=seu_valor&nome_do_outro_param=valor
+
+
+WEB SERVICES:
+
+REST- REpresentational State Transfer -> É um padrão arquitetural para comunicações entre aplicações,
+aproveita as estrutura que o HTTP proporciona, recursos são definidos via URI
+
+URI- Um recurso que pode ser usado em diversas plataformas, browsers, apps mobile, apps smart TV.
+
+OPERAÇÕES- métodos HTTP (GET, POST, DELETE, PUT/PATCH)
+
+FORMATOS - cabeçalhos são usados para indicar o formato(JSON, XML, HTML)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

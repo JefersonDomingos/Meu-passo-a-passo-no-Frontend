@@ -1,0 +1,13 @@
+1_ Vamos criar um domínio na WEB verificando se há disponibilidade, Exemplo: www.testedominio.com.br
+
+2_ Cadastrar-se algum servidor de hospedagem e liberar o FTP (File Transfer Protocol) para enviar seus arquivos
+do site criado.
+
+3_ Depois de comprar um serviço de hospedagem, baixe um programa para enviar seus arquivos via FTP. Ex: FileZila,
+preencha os campos que o programa pedir e conecta seu FileZila com o seu servidor de dominio,
+faça o upload de seus arquivos locais para dentro do FileZila do seu dominio sempre colocando na pasta: www
+pois a primeira coisa procuarada lá é o: index.html.
+
+4_ Agora é só fazer uma busca do seu domínio na URL do seu Browser(Navegador).
+
+
