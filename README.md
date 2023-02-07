@@ -2,7 +2,5 @@
 Este repositório é a minha trilha de estudos de desenvolvimento Frontend
 
 - [x] Entendendo a Internet e Hospedagem<br>
-- [x] HTML
-  - [x] HTML e semântica
-  - [X] Acessibilidade WEB
-  - [ ] Formulário HTML<br>
+- [x] HTML semântico e acessibilidade<br>
+- [] Formulários e validação<br>
