@@ -30,6 +30,14 @@ BAIXA VISÃO:
 -Não passar informações de "certo" ou "errado" apenas através de "verde" e "vermelho",
 pelas pessoas daltônicas pois o verde e o vermelho são praticamente iguais para elas.
 
+DEFICIENTES FÍSICOS:
+
+Exemplo: Parkinson
+
+-Dar mais opções de usabilidade além do mouse,
+-Botões em tamanho acessível para ser acessado sem muita concentração,
+-auto complete como CEP por exemplo para evitar muita digitação.
+
 
 
 
