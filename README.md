@@ -5,4 +5,4 @@ Este repositório é a minha trilha de estudos de desenvolvimento Frontend
 - [x] HTML
   - [x] HTML5 e semântica
   - [X] Acessibilidade WEB
-  - [ ] Formulário HTML<br>
+  - [ ] Formulário HTML e Validação JS<br>
