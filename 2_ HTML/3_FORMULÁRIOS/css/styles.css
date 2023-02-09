@@ -1,3 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #dde0e6;
+    color: #03032c;
+    font-family:Helvetica, sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo1{
+    display: flex;
+    margin: 5px 0 5px 0;
+    border: none;
+    gap:10px
+}
+
+.grupo1 .campo {
+    width:100%;
+}
+
+.grupo2{
+    margin: 5px 0 5px 0;
+    border: none;
+}
+
+
+#tecnologias{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.campo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.campo label{
+    display: block;
+    margin-bottom: 2px;
+}
+
+
+#nome, #sobrenome, #email, textarea{
+    margin-bottom: 5px;
+    border: 1px solid #03032c;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 99.3%;
+    height: 30px;
+}
+
+#email{
+    width: 48%;
+}
+
+#nome:hover, #sobrenome:hover, #email:hover, textarea:hover{
+    border:  2px solid #03032c;;
+}
+
+form textarea:focus, input:focus{
+    outline: 1px solid #03032c;
+}
+
+.campo textarea{
+    height: 80px;
+}
+
+
+form button{
+    background-color: #03032c;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.2em;
+    font-weight: 600;
+}
+
+form button:hover{
+    padding: 0.3em;
+}
+
+
+
+
+
 
 
 
