@@ -23,7 +23,7 @@ form{
     display: flex;
     margin: 5px 0 5px 0;
     border: none;
-    gap:10px
+    gap:15px;
 }
 
 .grupo1 .campo {
@@ -59,6 +59,7 @@ form{
     border-radius: 5px;
     width: 99.3%;
     height: 30px;
+    padding-left: 10px;
 }
 
 #email{
