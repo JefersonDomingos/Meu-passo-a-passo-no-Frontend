@@ -36,7 +36,7 @@ form{
 }
 
 
-#tecnologias{
+#campo-tech{
     margin-bottom: 5px;
     display: block;
 }
@@ -90,6 +90,16 @@ form button{
 
 form button:hover{
     padding: 0.3em;
+}
+
+@media screen and (max-width:480px){
+    .grupo1{
+        display: block;
+    }
+
+    #email{
+        width: 100%;
+    }
 }
 
 

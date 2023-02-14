@@ -4,7 +4,8 @@ const sobrenome = document.querySelector("#sobrenome");
 const email = document.querySelector("#email");
 const area = document.querySelectorAll(".area");
 const senioridade = document.querySelector("#senioridade");
-const textarea = document.querySelector("#experiencia");
+const tecnologias = document.querySelectorAll(".tecnologias");
+const experiencias = document.querySelector("#experiencia");
 
 formulario.addEventListener("submit",(e) => {
     e.preventDefault()
@@ -38,6 +39,18 @@ formulario.addEventListener("submit",(e) => {
         alert("Selecione sua senioridade");
         return;
     }
+    
+    //tecnologias
+    if(!validaTecnologias(tecnologias)){
+        alert("Selecione pelo menos uma tecnologia");
+        return;
+    }
+
+    //experiencias
+    if(experiencias.value === ""){
+        alert("Adicione qualquer experiencia obtida");
+        return;
+    }
 
     formulario.submit();
 }
@@ -64,3 +77,11 @@ function validaAreaDev (area) {
     return false;
 }
 
+function validaTecnologias (techs) {
+    for(let i=0; i<tecnologias.length; i++){
+        if(techs[i].checked){
+            return true;
+        }
+    }
+    return false;
+}
