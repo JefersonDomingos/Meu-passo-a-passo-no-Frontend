@@ -17,18 +17,25 @@ formulario.addEventListener("submit",(e) => {
 
     //verificar sobrenome
     if(sobrenome.value === "" || sobrenome.value.length < 2){
-        alert("preencha o sobrenome corretamente");
+        alert("Preencha o sobrenome corretamente");
         return;
     }
 
     //verificar email
     if(email.value === "" || !validaEmail(email.value)){
-        alert("preencha o email corretamente");
+        alert("Preencha corretamente o email");
+        return;
+    }
+    
+    //Area de Dev
+    if(!validaAreaDev (area)){
+        alert("Selecione sua area de Dev");
         return;
     }
 
+    //Senioridade
     if(senioridade.value === ""){
-        alert("preencha o campo de senioridade");
+        alert("Selecione sua senioridade");
         return;
     }
 
@@ -48,13 +55,12 @@ function validaEmail(email){
     return false;
 }
 
-textarea.addEventListener("click", teste(area))
-
-function teste(area){
-    for(let i = 0; i < area.length; i++){
-        if(area[i].checked != false){
-            console.log(area[i]);
+function validaAreaDev (area) {
+    for(let i=0; i<area.length; i++){
+        if(area[i].checked){
+            return true;
         }
     }
+    return false;
 }
 
