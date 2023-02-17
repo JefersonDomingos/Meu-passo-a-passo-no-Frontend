@@ -1,0 +1,43 @@
+/*Celular 360px*/
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 35px;
+}
+
+/*Tablet 720px*/
+@media (min-width: 720px) {
+    .menu{
+        column-gap: 75px;
+    }
+}
+
+/*Desktop 1440px*/
+@media (min-width: 1440px) {
+    .menu{
+        column-gap: 110px;
+        flex-wrap: nowrap;
+    }
+
+    .menu__item:nth-child(1){
+        order: 1;
+    }
+
+    .menu__item:nth-child(2){
+        order: 3;
+    }
+
+    .menu__item:nth-child(3){
+        order: 4;
+    }
+
+    .menu__item:nth-child(4){
+        order: 5;
+    }
+
+    .menu__item:nth-child(5){
+        order: 2;
+    }
+}

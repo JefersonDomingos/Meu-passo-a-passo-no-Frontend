@@ -7,9 +7,9 @@ Este repositório é a minha trilha de estudos de desenvolvimento Frontend
   - [x] HTML5 e semântica
   - [X] Acessibilidade WEB
   - [X] Formulário HTML e Validação JS
-  - [ ] Boas práticas e SEO<br>
+  - [X] Boas práticas e SEO<br>
 
-- [ ] CSS
-  - [ ] Modelos de layout e posicionamento(BoxModel, FlexBox, Grid)
+- [X] CSS
+  - [X] Modelos de layout e posicionamento(BoxModel, FlexBox, Grid)
   - [ ] Responsividade e Media queries
   - [ ] Pré Processadores(Sass, PostCSS)
