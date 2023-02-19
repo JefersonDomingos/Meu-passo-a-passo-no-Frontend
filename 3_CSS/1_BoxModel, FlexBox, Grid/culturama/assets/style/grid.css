@@ -13,8 +13,42 @@
     grid-row: 2/4;
 }
 
+.eventos__item{
+    display: grid;
+    grid-template-areas: 
+    "imagem imagem"
+    "evento evento"
+    "data data"
+    "locall botao"
+}
+
+.eventos__item img{
+   grid-area:imagem;
+}
+
+.eventos__item h3{
+    grid-area: evento;
+}
+
+.eventos__item h4{
+    grid-area: data;
+}
+
+.eventos__item h5{
+    grid-area: locall;
+}
+
+.eventos__item button{
+    grid-area: botao;
+}
+
 /*Tablet*/
 @media (min-width: 720px){
+    .banner{
+        grid-template-columns: calc(50% - 0.75rem) auto auto;
+        column-gap: 1.5rem;
+    }
+
     .banner img:nth-child(1){
         grid-column: 1/2;
         grid-row: 1/3;
