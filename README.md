@@ -15,8 +15,8 @@ Este repositório é a minha trilha de estudos de desenvolvimento Frontend
   - [ ] Pré Processadores(Sass, PostCSS)
 
 - [ ] JAVASCRIPT
-    [ ] Lógica de programação e Sintaxe da Linguagem
-    [ ] Manipulação de DOM
-    [ ] JS Moderno (ES6+)
-    [ ] Gerenciadores de pacotes, promises, consumo de APIs
-    [ ] Typescript, Programação Orientada a Objetos e Funcional
+    - [ ] Lógica de programação e Sintaxe da Linguagem
+    - [ ] Manipulação de DOM
+    - [ ] JS Moderno (ES6+)
+    - [ ] Gerenciadores de pacotes, promises, consumo de APIs
+    - [ ] Typescript, Programação Orientada a Objetos e Funcional
