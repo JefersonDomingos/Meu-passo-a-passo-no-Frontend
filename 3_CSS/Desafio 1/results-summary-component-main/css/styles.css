@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: helvetica;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:linear-gradient(hsl(228, 45%, 44%), hsl(241, 81%, 54%));
+    border-radius: 0 0 25px 25px;
+    padding: 40px;
+    color: #fff;
+}
+
+.cabecalho h4{
+    opacity: .8;
+    font-weight:600;
+    
+}
+
+.tela__pontuacao{
+    background:linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.tela__pontuacao #pontuacao{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.tela__pontuacao #valor__maximo{
+    opacity: .6;
+    font-weight: 500;
+}
+
+.cabecalho h5{
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.cabecalho p{
+    font-weight: 500;
+    opacity: .6;
+}
+
+.principal{
+ padding: 1rem 2rem;
+}
+
+.principal h5{
+    font-size: 16px;
+}
+
+.lista__testes{
+    list-style: none;
+    margin-top: 25px;
+    margin-left: 8px;
+    display:flex;
+    flex-direction: column;
+}
+
+.lista__testes li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.lista__testes li strong{
+    margin-right: 5px;
+}
+
+.lista__testes li div{
+    display: flex;
+    align-items: center;
+}
+
+.lista__testes li #texto_reacao{
+    color: hsl(0, 100%, 67%);
+    margin-left: 5px;
+}
+
+.lista__testes li #texto_memoria{
+    color:hsl(39, 100%, 56%);
+    margin-left: 5px;
+}
+
+.lista__testes li #texto_verbal{
+    color:hsl(166, 100%, 37%);
+    margin-left: 5px;
+}
+
+.lista__testes li #texto_visual{
+    color: hsl(234, 85%, 45%);
+    margin-left: 5px;
+}
+
+.principal button{
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    text-align: center;
+    margin:0 auto;
+    display: block;
+    border-radius: 30px;
+    color: #fff;
+    background-color: hsl(224, 30%, 27%);
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.principal button:hover{
+    background:linear-gradient(hsl(228, 45%, 44%), hsl(241, 81%, 54%));
+
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    display: none;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:768px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    .cabecalho{
+        border-radius: 25px;
+        width: 300px;
+        height: 350px;
+    }
+
+    .lista__testes li div{
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+    }
+   
+}
