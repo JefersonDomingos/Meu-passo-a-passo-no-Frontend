@@ -11,7 +11,7 @@ Este repositório é a minha trilha de estudos de desenvolvimento Frontend
 
 - [X] CSS
   - [X] Modelos de layout e posicionamento(BoxModel, FlexBox, Grid)
-  - [ ] Responsividade e Media queries
+  - [X] Responsividade e Media queries
   - [ ] Pré Processadores(Sass, PostCSS)
 
 - [ ] JAVASCRIPT
