@@ -1,10 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 :root{
     --azul-muito-claro:hsl(225, 100%, 94%);
     --azul-brilhante: hsl(245, 75%, 52%);
     --azul-ultra-claro: hsl(225, 100%, 98%);
-    --azul-desfocado: hsl(224, 23%, 55%);
+    --azul-desfocado: hsl(225, 16%, 41%);
     --azul-escuro: hsl(223, 47%, 23%);
+    --hover-botoes: hsl(245, 70%, 58%);
+    /*Fonts*/
+    --fonte-principal:'Red Hat Display', 'sans-serif';
 }
+
 *{
     margin:0;
     padding:0;
@@ -20,6 +26,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;*/
     background-color:var(--azul-muito-claro);
+    font-family: var(--fonte-principal);
 }
 
 .corpo__pagina{
@@ -49,10 +56,12 @@ body{
 }
 
 .secao__planos{
+    font-weight: 700;
     display:grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: repeat(2,auto);
     column-gap: 15px;
+    font-size: 14px;
 }
 
 .secao__planos .icone__musica{
@@ -70,7 +79,7 @@ body{
 .secao__planos h5{
     grid-column: 2/3;
     grid-row: 2/3;
-    opacity: .6;
+    color: var(--azul-desfocado);
     align-self: center;
 }
 
@@ -79,4 +88,53 @@ body{
     grid-row: 1/3;
     align-self: center;
     margin-left: 25px;
+    color:var(--azul-brilhante);
 }
+
+.secao__planos .mudar__plano:visited{
+    color: var(--azul-brilhante);
+}
+
+.secao__planos .mudar__plano:hover{
+    color: var(--hover-botoes);
+}
+
+.secao__pagamento{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.secao__pagamento .botao__pagamento{
+    background-color: var(--azul-brilhante);
+    padding:12px;
+    border-radius: 10px;
+    color:var(--azul-muito-claro);
+    text-decoration: none;
+    box-shadow: 0 6px 9px var(--azul-desfocado);
+    margin-bottom: 20px;
+}
+
+.secao__pagamento .botao__pagamento:hover{
+    background-color: var(--hover-botoes);
+}
+
+.secao__pagamento .botao__cancelar-ordem{
+    color: var(--azul-desfocado);
+    text-decoration: none;
+}
+
+@media(min-width: 834px){
+
+    body{
+        background-image: url('../images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-size:contain;
+    }
+    .secao__pagamento{
+        padding: 2em 10em;
+    }
+}
+
