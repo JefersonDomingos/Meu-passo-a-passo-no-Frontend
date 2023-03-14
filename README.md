@@ -19,4 +19,39 @@ Este repositório é a minha trilha de estudos de desenvolvimento Frontend
     - [ ] Manipulação de DOM
     - [ ] JS Moderno (ES6+)
     - [ ] Gerenciadores de pacotes, promises, consumo de APIs
-    - [ ] Typescript, Programação Orientada a Objetos e Funcional
+
+- [ ] REACT JS
+    - [ ] Componentes
+    - [ ] Ciclo de Vida
+    - [ ] Hooks
+    - [ ] Estado
+    - [ ] Contexto
+    - [ ] etc
+
+- [ ] TYPESCRIPT
+    - [ ] Programação Orientada a Objetos e Funcional
+
+- [ ] BANCO DE DADOS
+  - [ ] SQL
+  - [ ] SqLITE
+
+- [ ] CSS AVANÇADO 
+    - [ ] Bootstrap
+    - [ ] Tailwind
+
+- [ ] NEXT JS
+    - [ ] Server Side Rendering (SSR)
+    - [ ] Static Site Generation (SSG)
+    - [ ] Incremental Static Regeneration (ISR)
+
+- [ ] Testes Automatizados
+    - [ ] Jest
+    - [ ] Cypress
+    - [ ] Testing Library
+    - [ ] etc
+
+- [ ] CONTROLE DE VERSÃO
+    - [ ] GIT
+    - [ ] Hospedagem de Repositorios
+    - [ ] GitHub, BitBucket, GitLab, etc
+
