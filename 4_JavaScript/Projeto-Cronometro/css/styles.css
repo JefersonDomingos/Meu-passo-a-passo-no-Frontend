@@ -5,3 +5,75 @@
     font-family: 'Orbitron', sans-serif;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 2em;
+    padding-top: 5em;
+    background-color: #e4e4e4
+
+}
+
+.container h2{
+    font-size: 30px;
+    color: #175cff;
+}
+
+.timer{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.time{
+    text-align: center;
+    min-width: 90px;
+    color: #050531;
+    font-weight: bold;
+}
+
+.timer #miliseconds{
+    padding-left: 6px;
+    font-size: 24px;
+    color: #383737;
+}
+
+.separator{
+    padding: 0 6px;
+    color: #383737;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.controls button{
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1ms;
+}
+
+.controls button:hover{
+    transform: scale(1.1);
+}
+
+.controls #start-btn{
+    background-color: #175cff;
+    color: #fff;
+}
+
+.controls #continue-btn, #pause-btn{
+    display: none;
+}
+
+
+
+
