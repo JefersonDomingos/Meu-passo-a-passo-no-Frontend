@@ -63,14 +63,16 @@
 
 .controls button:hover{
     transform: scale(1.1);
-}
-
-.controls #start-btn{
     background-color: #175cff;
     color: #fff;
 }
 
-.controls #continue-btn, #pause-btn{
+.controls #start-btn-id{
+    background-color: #175cff;
+    color: #fff;
+}
+
+.controls #resume-btn-id, #pause-btn-id{
     display: none;
 }
 
