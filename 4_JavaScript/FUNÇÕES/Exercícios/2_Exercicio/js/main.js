@@ -1,7 +1,10 @@
-/*Criar uma função que escreva hello world*/
+// Escreva uma função que recebe um parâmetro idade,
 
-function hello () {
-    console.log("Hello World");
+//Imprima uma mensagem no console usando o template literals, você tem (x)anos
+
+
+function minhaIdade(idade){
+	console.log(`Você tem ${idade} anos`)
 }
 
-hello();
+minhaIdade(24);
