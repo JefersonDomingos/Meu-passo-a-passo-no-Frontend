@@ -8,8 +8,10 @@ recognition.addEventListener('result', onSpeak);
 function onSpeak(e){
     const chute = e.results[0][0].transcript;
     exibeChute(chute);
-    validaNumero(chute)
+    validaNumero(chute);
 }
+
+
 
 function exibeChute (chute){
     chuteEL.innerHTML = `
