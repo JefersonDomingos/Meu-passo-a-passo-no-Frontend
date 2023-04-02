@@ -52,6 +52,18 @@ h3{
     font-weight: 500;
 }
 
+#btn-reiniciar{
+    padding: 5px;
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+#btn-reiniciar .fa-solid{
+    font-size: 2em;
+    color: var(--cor-principal);
+}
+
 
 @media (max-width: 365px) {
     h1{
