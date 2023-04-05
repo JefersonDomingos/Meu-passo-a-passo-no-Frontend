@@ -1,5 +1,6 @@
-//Mutação em objetos
-//Podemos criar um objeto A clonar o A no objeto B
+//Mutação em objetos;
+//Podemos criar um objeto A clonar o A no objeto B;
+//O que for mudado no objeto A é mudado no objeto B;
 
 
 let objA = {
@@ -7,7 +8,7 @@ let objA = {
     font: 'arial'
 }
 
-let objB = objA; //copiando
+let objB = objA; //Igualando
 
 console.log(objA);
 console.log(objB);
