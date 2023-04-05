@@ -62,6 +62,9 @@ h3{
 #btn-reiniciar .fa-solid{
     font-size: 2em;
     color: var(--cor-principal);
+    box-shadow: 3px 3px 8px #000;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 

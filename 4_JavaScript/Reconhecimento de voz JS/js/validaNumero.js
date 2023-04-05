@@ -1,6 +1,14 @@
 function validaNumero(chute){
     const numero = +chute; //transforma em inteiro
-    console.log(numero)
+
+    if(gameOver(chute)){
+        exibeChute(chute)
+        document.body.innerHTML =`
+        <h3>Você perdeu!</h3>
+        <button class="reiniciar" id="btn-reiniciar"><i class="fa-solid fa-arrow-rotate-right" id="i-reload"></i></button>
+        `
+        return;
+    }
 
     if(verificaSeENumero(numero)){
         chuteEL.innerHTML += `
@@ -52,6 +60,10 @@ function acertou (numeroSorteado, numero){
 
 function maiorOuMenor (numero, numeroSorteado){
     return numero > numeroSorteado;
+}
+
+function gameOver(chute){
+    return chute == "game over";
 }
 
 recognition.addEventListener('end',  () => recognition.start());
