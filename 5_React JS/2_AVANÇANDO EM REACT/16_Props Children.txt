@@ -1,0 +1,41 @@
+1_ Children prop é um recurso utilizado para quando um componente
+precisa ter JSX dentro dele;
+
+2_ Porém este JSX vem do eer Tay pai;
+
+3_ Então o componente age como um container, abraçando estes
+elementos;
+
+4_ E children é considerada uma prop do componente;
+
+Vamos ver na pratica! :)
+
+
+
+
+* Vamos criar um componente chamado "TesteChildren", desestruturando com a palavra 'children' para colocar
+o componente em App.js e simplesmente colocar uma tag "html" dentro no componete <TesteChildren>;
+
+const TesteChildren = ({children}) => { 
+  return (
+    <div>
+        <h3>TesteChildren</h3>
+        {children}
+    </div>
+  )
+}
+
+export default TesteChildren
+
+
+
+* Usando o children
+      <TesteChildren>
+        <h4>Children no App.js</h4>
+      </TesteChildren>
+
+* Se não fosse usado a desestruturação do "children" o "HTML" <h4></h4> colocado iria ficar ocultado na tela;
+
+    <TesteChildren>
+        <h4>Children no App.js</h4>
+    </TesteChildren>

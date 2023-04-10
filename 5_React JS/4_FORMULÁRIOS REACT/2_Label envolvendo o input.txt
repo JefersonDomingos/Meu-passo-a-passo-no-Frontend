@@ -1,0 +1,29 @@
+1_Em React um padrão comum é a tag "label" envolvendo um "input"
+
+2_Isso faz com que o atributo "for" se torne opcional;
+
+3_Simplificando nossa estrutura de HTML, sem perder a semantica;
+
+Vamos ver isto na pratica!
+
+************************************** MyForm.js ********************************************
+
+import "./MyForm.css"
+
+const MyForm = () => {
+  return (
+    <div>
+        <form>
+            <div>
+                <label>
+                  <span>Email:</span>
+                  <input type="email" name="email" placeholder="Digite seu email" />
+                </label>
+            </div>
+            <input type="submit" value="enviar"/>
+        </form>
+    </div>
+  )
+}
+
+export default MyForm

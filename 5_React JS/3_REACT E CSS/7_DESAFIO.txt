@@ -1,0 +1,75 @@
+1_ Crie um novo projeto chamado challengecss;
+
+2_ No CSS global zere a margin, padding e coloque uma fonte que vocé
+goste;
+
+3_ Crie um componente que exibe detalhes de carros, este componente deve
+ser estilizado com scoped;
+
+4_Exiba pelo menos 3 carros;
+
+5_ Coloque um titulo em App.js para o seu projeto, estilize com o App.css;
+
+FIZ ESSE PROJETO UTILIZANDO O MESMO PROJETO CRIADO, O modulo-4
+
+
+App.js////////////////////////////////////////// :
+
+import './App.css';
+import Cars from'./components/Cars'
+
+function App() {
+  const carros = [
+    {id:1, marca:"chevrolet", ano: 2023, cor: "prata"},
+    {id:2, marca: "fiat", ano: 1998, cor: "vermelho"},
+    {id:3, marca: "ford", ano:2017, cor: "preto"}
+  ];
+
+  return (
+    <div className="App">
+      <h1 className="my_title">Desafio CSS in React JS</h1>
+
+      {carros.map((car) => (
+        <Cars key={car.id} brand={car.marca} year={car.ano} color={car.cor}/>
+      ))}
+    </div>
+  )
+}
+
+export default App;
+
+App.css////////////////////////////
+
+.my_title{
+    color:blue;
+}
+
+Cars.js ///////////////////////////
+
+import styles from './Cars.module.css'
+
+const Cars = ({brand, year, color}) => {
+  return (
+    <div>
+        <ul className={styles.my_ul}>
+            <li>marca: {brand}</li>
+            <li>ano: {year}</li>
+            <li>cor: {color}</li>
+        </ul>
+    </div>
+  )
+}
+
+export default Cars
+
+Cars.module.css ///////////////////////
+
+.my_ul{
+    background-color: #cecece;
+    color: blue;
+    list-style: none;
+    max-width: 300px;
+    margin: 3px auto;
+    text-align: center;
+    
+}

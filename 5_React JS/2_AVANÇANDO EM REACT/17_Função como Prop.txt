@@ -1,0 +1,33 @@
+1_ As funções podem ser passadas para as props normalmente;
+
+2_ Basta criar uma "função" no componente "pai" e enviar como "Prop" para o componente;
+
+3_ No componente "filho" ela pode ser ativada por um evento, por exemplo;
+
+Vamos ver na PRÁTICA :)
+
+
+*Usaremos a função abaixo, ela está no nosso componente "Pai" o 'App.js'
+
+function propsFuncao () {
+    console.log("Função em Props");
+}
+
+*Vamos criar um componente chamado "FuncaoEmProps", e veja que estamos desestruturando a Prop "myFunction"
+
+
+const FuncaoEmProps = ({myFunction}) => {
+  return (
+    <div>
+        <button onClick={myFunction}>Testando função em Props</button> //CHAMAR A FUNÇÃO
+    </div>
+  )
+}
+
+export default FuncaoEmProps
+
+*Agora vamos chamar o componente "FuncaoEmProps" dentro da <div className="App"> que é a do nosso componente "pai" App.js
+//A prop 'myFunction' está recebendo a funçao que queremos, essa mesma se encontra no componente "Pai" que é o App.js
+
+<FuncaoEmProps myFunction={propsFuncao}/>
+

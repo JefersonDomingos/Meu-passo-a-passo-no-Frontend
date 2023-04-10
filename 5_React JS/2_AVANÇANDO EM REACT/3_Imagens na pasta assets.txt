@@ -1,0 +1,24 @@
+1__A pasta public pode ser utilizada para colocar imagens,como fizemos na aula passada;
+2__Mas um padrão bem utilizado para as imagens dos projetos é colocar em uma pasta chamada "assets", em src;
+3__Ou seja vamos encontrar projetos com as duas abordagens tanto em public quanto em assets;
+4__Em assets precisamos importar as imagens, e o src é dinâmico com o nome da importação;
+
+VEJA O CÓDIGO:
+import './App.css';
+import city from './assets/city.jpg'  //IMAGEM NA PASTA assets
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Avançando no React JS</h1>
+
+      {/*Usando a imagem na pasta assets*/}
+      <img src={city} alt="uma cidade"/> //IMAGEM NA PASTA assets
+      
+    </div>
+  );
+}
+
+export default App;
+
+

@@ -1,0 +1,5 @@
+Crie um app em react do zero
+
+1__digite o comando npx create-react-app modulo-3
+2__encontre o arquivo App.js apague o que for desnecessário e deixe apenas um <h1>
+com o título da seção.

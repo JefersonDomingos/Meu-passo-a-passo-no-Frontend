@@ -1,0 +1,51 @@
+1_ O hook useState é um dos mais utilizados;
+
+2_ Utilizamos para GERENCIAR O ESTADO DE ALGUM DADO, variáveis não funcionam corretamente
+o componente não renderiza;
+
+3_Para guardar o dado definimos o nome da variável e para alterar vamos utilizar setNome, onde nome,
+é o nome do nosso dado;
+
+VAMOS VER NA PRÁTICA:
+
+
+1 passo : crie um componente chamado ManageData.JS e importe ele em App.js
+
+2 passo : Veja que não podemos mudar o o valor de uma variável :
+const ManageData = () => {
+    let someData = 10;  //essa variável não vai ter o valor alterado
+    console.log(someData);
+    
+    return (
+        <div>
+            <div>
+                <h1>ManageData</h1>
+                <p>Valor de someData é {someData}</p> // mesmo valor
+                <button onClick={() => someData = 15}>Mudar variável</button> //continua o mesmo valor
+            </div>
+        </div>
+    )
+}
+
+export default ManageData
+
+3 passo: vamos usar o hook useState:
+
+import {useState} from 'react'; //comece importando o hook 'useState'
+
+const ManageData = () => {
+   const [number, setNumber] = useState(10); //'setNumber' é como se representasse a const 'number'
+   console.log(number);
+    
+    return (
+        <div>
+            <div>
+                <h1>ManageData</h1>
+                <p>O valor é {number}</p> //O valor é 10, porém quando mudar abaixo esse valor também muda na tela.
+                <button onClick={() => setNumber (25)}>Mudar State</button> //agora usando o hook 'useState' o valor muda para 25.
+            </div>
+        </div>
+    )
+}
+
+export default ManageData

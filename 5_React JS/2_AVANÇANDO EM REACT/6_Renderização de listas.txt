@@ -1,0 +1,33 @@
+Uma outra ação bem comum é renderizar listas de dados no template;
+
+Fazemos isso com os dados com tipo de array;
+
+Utilizando o método map para nos auxiliar;
+
+Além dos dados podemos inserir JSX em cada iteração;
+
+Vamos ver na pratica!
+
+
+//Usaremos o método .map() para exibir cada item do array list = ["Jéferson", "Lucas", "Matheus"];
+
+import React, { useState } from 'react';
+
+const ListRender = () => {
+
+  const [list] = useState(["Jéferson", "Lucas", "Matheus"]);
+  return (
+    <div> 
+      <ul> //OBS: depois da flechinha da "arrow function" usei os parêteses porque o JSX retorna um objeto 'atentar-se a isso'.
+          {list.map((item) => (
+              <li>{item}</li>
+          ))}
+      </ul>
+    </div>
+  )
+};
+
+export default ListRender;
+
+será exibida na tela uma lista em HTML, escrita pelo JSX;
+

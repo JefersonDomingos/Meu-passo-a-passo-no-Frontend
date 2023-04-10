@@ -1,0 +1,26 @@
+RENDERIZAÇÃO CONDICIONAL
+
+1_ Renderização condicional é quando imprimimos uma parte do template
+baseado em uma condição;
+
+2_ Ou seja, utilizando uma CHECAGEM COM if;
+
+3_ Isso é interessante em situações como: usuário autenticado/não autenticado;
+
+Vamos ver na prática!
+
+//usaremos o useState
+import { useState } from "react"; 
+
+const ConditionalRender = () => {
+    const [x] = useState(true); //usando o useState;
+  return (
+    <div>
+        //temos que usar o "&&" para verificar se o "x" do useState está verdadeiro (true);
+        //Se estiver verdadeiro (true), imprima a mensagem na tela.
+        {x && <p>Se X for verdadeiro esta mensagem aparece</p>}
+    </div>
+  )
+}
+
+export default ConditionalRender

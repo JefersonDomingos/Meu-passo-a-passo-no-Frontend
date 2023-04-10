@@ -1,0 +1,73 @@
+A Propriedade Key
+
+1_ Iterar lista como fizemos no tópico "6_Renderização de listas", sem a Propriedade Key nos gera um warning,
+podemos verificar isso no console;
+
+2_ O React precisa de uma chave única em cada um dos itens Iterados;
+
+3_ Isso serve para ajuda-lo na renderização do componente;
+
+4_ Geralmente teremos um ARRAY DE OBJETOS e podemos colocar key como uma chave ÚNICA como o ID de algum dado;
+
+5_ Em último caso devemos utilizar o index do método map(); //NÃO RECOMENDADO
+
+Vamos corrigir o erro em key:
+* O método map()  traz um index com ele, vamos usar esse índex.
+
+import React, { useState } from 'react';
+
+const ListRender = () => {
+
+  const [list] = useState(["Jéferson", "Lucas", "Matheus", "Thiago"]);
+  return (
+    <div>
+        {list.map((item,i) => (
+            <li key={i}>{item}</li> //i é o index do método map();
+        ))}
+
+    </div>
+  )
+};
+
+export default ListRender;
+
+//////////////////////////////////////////////////////////////////
+
+Outro método de usar a 'key' É usando o "id" do proprio objeto "ESTE É O MAIS INDICADO";
+Veja o objeto [users] = useState
+
+import React, { useState } from 'react';
+
+const ListRender = () => {
+
+  const [list] = useState(["Jéferson", "Lucas", "Matheus", "Thiago"]);
+  
+  const [users] = useState([
+    {id: 1, nome: "Jéferson", idade: 24},  //Usar o id como key para o <li>
+    {id: 2, nome: "Ludmila", idade: 18},
+    {id:3, nome: "Dionata", idade:21}
+  ])
+  
+  return (                    
+    <div>
+       <ul>
+          {list.map((item,i) => (   //i é o index do método map();
+          
+            <li key={i}>{item}</li>
+          
+          ))}
+        </ul>
+        
+        <ul>
+          {users.map((user) => ( //o 'id' foi usado como 'key' para o <Li>;
+          
+            <li key={user.id}> 
+              {user.nome} - {user.idade}
+            </li> 
+        
+            ))}
+        </ul>
+
+    </div>
+  )
+};

@@ -1,0 +1,41 @@
+1_Para manipular os valores dos inputs vamos utilizar o hook "useState";
+
+2_Ou seja, podemos armazenar na variavel e utilizar o set para alterar o valor;
+
+3_Vamos criar uma fungao para alterar o valor no evento "onChange";
+
+4_Deixando nosso código facil de trabalhar nas próximas etapas: como
+envio dos dados para BD e validação;
+
+Vamos ver isto na pratica!
+
+************MyForm.js*****************
+
+import "./MyForm.css";
+import {useState} from 'react';
+
+const MyForm = () => {
+  const [email, setEmail] = useState();
+  
+  const handleEmail = (e) => {
+    setEmail(e.target.value); //alterando estado pelo "useState" do setEmail
+  }
+
+  console.log(email); //Imprimirá o valor passado para "email" que recebe de "setEmail" pelo "hook useState"
+
+  return (
+    <div>
+        <form>
+            <div>
+                <label>
+                  <span>Email:</span>
+                  <input type="email" name="email" placeholder="Digite seu email" onChange={handleEmail}/>
+                </label>
+            </div>
+            <input type="submit" value="enviar"/>
+        </form>
+    </div>
+  )
+}
+
+export default MyForm

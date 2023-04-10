@@ -1,0 +1,43 @@
+1_ Para enviar um form vamos utilizar o evento "onSubmit";
+
+2_ Ele chamará uma função, e nesta "devemos lembrar de parar a submissão com o preventDefault";
+
+3_ Nesta etapa podemos realizar validações, envio de form para o servidor,
+reset de form e outras ações;
+
+Vamos ver isto na pratica!
+
+********************************MyForm.JS***********************************
+
+import "./MyForm.css";
+import {useState} from 'react';
+
+const MyForm = () => {
+  const [email, setEmail] = useState();
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // PARA NÃO RECARREGAR A PÁGINA DEPOIS DE UM EVENTO DE INPUT...
+    
+    setEmail("Testando o onSubmit"); //PASSANDO UM VALOR PARA O "email"
+
+    console.log(email);
+
+  }
+
+  return (
+    <div> 
+        <form onSubmit={handleSubmit}> //EVENTO DE ENVIAR DO FORMULARIO...
+            <div>
+                <label>
+                  <span>Email:</span>
+                  <input type="email" name="email" placeholder="Digite seu email"/>
+                </label>
+            </div>
+            <input type="submit" value="enviar"/>
+        </form>
+    </div>
+  )
+}
+
+export default MyFor
+

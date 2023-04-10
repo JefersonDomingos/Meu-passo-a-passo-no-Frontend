@@ -1,0 +1,46 @@
+1_ CSS global é utilizado para estilizar diversos elementos em comum ou
+fazer um reset no CSS;
+
+2_ Utilizamos 0 arquivo index.css para isso;
+
+3_ Ele está na pasta 'src'
+
+Vamos ver na pratica!
+
+
+** Vamos acessar o arquivo "index.css" na pasta "src" do projeto e excluir tudo, passando somente os estilos abaixo:
+
+body{
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+
+** Agora vamos limpar todo o css do "App.js", e passar apenas um <h1> por dentro desse componente 
+
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>React CSS</h1>
+    </div>
+  );
+}
+
+** O css que define tudo, agora é o do "index.css"
+
+body{
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+
+
+
+export default App;
+
+
+

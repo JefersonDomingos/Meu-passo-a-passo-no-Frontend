@@ -1,0 +1,53 @@
+1_ O CSS modules é um recurso de CSS "scoped";
+
+2_ Ou seja, ele vai ser exclusivo do componente;
+
+3_ O nome do arquivo é: Componente.module.css;
+
+4_ Precisamos importa-lo também no componente;
+
+Vamos ver na pratica!
+
+*** Primeiro vamos criar um componente chamado "Title.js" e outro chamado "Title.module.css"
+
+///Title.js
+
+import styles from './Title.module.css' //Importando o module.css
+
+const Title = () => {
+  return (
+    <div>
+
+        //Usando uma classe que está estilizada no './Title.module.css'
+        <h2 className={styles.my_title}>Usando o CSS modules</h2>
+    </div>
+  )
+}
+
+export default Title
+
+
+
+//// Title.module.css
+
+.my_title{
+    color:orange;
+    background-color: #000;
+}
+
+*** Agora é só colocar o Title.js no componente principal App.js e a classe em Title.module.css será aplicada;
+
+import './App.css';
+import Title from './components/Title';
+
+function App() {
+
+  return (
+    <div className="App">
+      <Title />
+    </div>
+  )
+}
+
+export default App;
+

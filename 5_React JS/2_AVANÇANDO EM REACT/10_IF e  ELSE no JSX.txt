@@ -1,0 +1,52 @@
+1_ Podemos também realizar um IF e ELSE no JSX;
+
+2_ Aqui devemos utilizar o IF ternário;
+
+3_ Onde Temos a sintaxe = condição ? SIM : NÃO ;
+
+4_ Vamos ver na prática:
+
+Usaremos o useState() e o componente ConditionalRender para fazer um exemplo.
+
+import { useState } from "react";
+
+const ConditionalRender = () => {
+    const [x] = useState(true);
+    const [name] = useState("Jéferson");  //O nome está como Jéferson
+  return (
+    <div>
+        {x && <p>Se X for verdadeiro esta mensagem aparece</p>}
+
+        ///Entendendo a Sitaxe do IF e Else no JSX, OBS: O JSX é parecido com o HTML porém é retornado como objeto e
+        por isso o uso de parênteses();
+
+        //nome é igual a Jéferson ?         SIM                  :                NÃO   
+        {name === "Jéferson" ?       (<p>O nome é Jéferson </p>) : (<p>O nome NÃO é Jéferson</p>)}
+    </div>
+  )
+}
+
+export default ConditionalRender;
+
+
+//AGORA VAMOS COLOCAR UM BOTÃO PARA TROCAR O NOME DINÂMICAMENTE;
+
+import { useState } from "react";
+
+const ConditionalRender = () => {
+    const [x] = useState(true);
+    
+    //AGORA ESTOU USANDO O setName QUE VAI LEVAR O valor name PARA SER MODIFICADO NO BOTÃO MudarNome
+    const [name, setName] = useState("Jéferson");
+  return (
+    <div>
+        {x && <p>Se X for verdadeiro esta mensagem aparece</p>}
+        {name === "Jéferson" ? (<p>O nome é Jéferson </p>):(<p>O nome NÃO é Jéferson</p>)}
+
+        //FAZENDO A MODIFICAÇÃO NO [name] ATRAVÉS DO setName POR UMA FUNÇÃO ANÔNIMA.
+        <button onClick={() => setName("Matheus")}>MudarNome</button>
+    </div>
+  )
+}
+
+export default ConditionalRender;

@@ -1,0 +1,110 @@
+1_O CSS de componente é utilizado para um componente em especifico;
+
+2_Geralmente é criado um arquivo.css que tem o mesmo nome do componente e este é importado no componente;
+
+3_Note que este método não é scoped, ou seja, o CSS vaza para outros
+componentes se houver uma regra em colisão;
+
+4_O React ja cria um exemplo desta técnica com o App.css/js;
+
+5_ Normalmente o componente JS tem o mesmo nome do seu componente CSS
+
+Vamos ver na pratica!
+
+
+*** Criar uma pasta chamada "components"  dentro de "src";
+
+*** Dentro de "components" vamos criar o componente "IniciandoPj.js" e um chamado "IniciandoPj.css"
+
+*** Agora no "IniciandoPj.js" fazemos o importe do "IniciandoPj.css" para fazermos a estilização do componente "IniciandoPj.js"
+
+***Veja:
+
+IniciandoPj.js ////////
+
+import './IniciandoPj.css'
+
+const IniciandoPj = () => {
+  return (
+    <div>
+        <p>IniciandoPj</p>
+    </div>
+  )
+}
+
+export default IniciandoPj 
+
+
+IniciandoPj.css ////////
+
+p{
+    color: red;
+}
+
+
+//////////////////////////////////////////////////////////////////////
+
+CONFLITO DE ESTILIZAÇÃO:
+
+
+App.js  
+
+import './App.css';
+import IniciandoPj from './components/IniciandoPj';
+
+function App() {
+  return (
+    <div className="App">
+    {/*CSS global*/}
+      <h1>React CSS</h1>
+      <p>Este paragrafo está em App.js</p> /// Esse <p> mesmo estando em "App.js" pega os estilos de <IniciandoPj/>
+    
+    {/*CSS de componente*/}
+      <IniciandoPj/> ////////Esse componente possui Estilos de <p> no seu CSS.
+    </div>
+  );
+}
+
+export default App;
+
+////////////////////////////////////////////
+
+RESOLVENDO O CONFLITO:
+
+*** Vamos criar uma "className" para o <p> que está em App.js;
+*** Vamos estilizar esse <p className="teste">  no "CSS" do componente "IniciandoPj.js"
+
+App.js  
+
+import './App.css';
+import IniciandoPj from './components/IniciandoPj';
+
+function App() {
+  return (
+    <div className="App">
+    {/*CSS global*/}
+      <h1>React CSS</h1>
+      <p className="teste" >Este paragrafo está em App.js</p> // Mas aceita estilização pela "className"
+    
+    {/*CSS de componente*/}
+      <IniciandoPj/> ////////Esse componente possui Estilos de <p> no seu CSS.
+    </div>
+  );
+}
+
+export default App;
+
+////////////////////Estilizando o <p className="teste">
+
+IniciandoPj.css 
+
+p{
+    color: red;
+}
+
+.teste{
+    color:blue;
+}
+
+
+ 

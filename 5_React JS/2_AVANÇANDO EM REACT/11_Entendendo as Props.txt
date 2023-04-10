@@ -1,0 +1,43 @@
+
+1_ Props é um recruso fundamental do React JS;
+
+2_ Nos permite passar valores de um componente PAI para um componente FILHO;
+
+3_ Isso será muito ÚTIL quando os DADOS forem CARREGADOS de um BANCO DE DADOS por exemplo;
+
+4_ As Props vem em um OBJETO no ARGUMENTO da FUNÇÃO do COMPONENTE;
+
+VAMOS VER NA PRÁTICA:
+
+
+_Criar o componente PropsComponent.js:
+
+                        //NA (props) dentro dos parênteses estou importando a Props name="Jéferson"
+const PropsComponent = (props) => {
+  return (
+    <div>                               //AQUI ENTRE CHAVES ESTOU UTILIZADNO A Props name="Jéferson" do componente;
+        <p>O nome que está na Props é : {props.name}</p>
+    </div>
+  )
+}
+
+export default PropsComponent;
+/////////////////////////////////////////////////////////////////
+
+_Importar o componente PropsComponent.js em App.js:
+
+import PropsComponent from './components/PropsComponent';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Avançando no React JS</h1>
+
+    // A Props É ESSE VALOR name ="Jéferson", que está dentro do componente PropsComponent
+      <PropsComponent name = "Jéferson"/>
+    </div>
+  );
+}
+
+export default App;
+

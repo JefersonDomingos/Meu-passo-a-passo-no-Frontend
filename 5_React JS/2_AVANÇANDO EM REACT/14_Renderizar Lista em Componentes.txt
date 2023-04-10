@@ -1,0 +1,51 @@
+RENDERIZAÇÃO COM LOOP
+
+1_Os arrays de dados podem ter muitos itens também;
+
+2_Entao o correto é utilizar uma estrutura de loop (map) para a sua
+exibição;
+
+3_ E com isso conseguimos conciliar os trés conceitos: renderização de
+listas, reaproveitamento de componentes e props;
+
+Vamos ver na pratica!
+
+* 1 passo, vamos criar um array de objetos dentro de App.js:
+ const cars = [
+    {id:1, brand:"Chevrolet", km:10000, color:"black", isNew:false },
+    {id:2, brand:"Fiat", km:0.250, color:"white", isNew:false },
+    {id:3, brand:"Kia", km:15000, color:"yellow", isNew:false },
+    {id:4, brand:"Vw", km:10000, color:"iceblue", isNew:true },
+  ]
+
+* 2 passo, Vamos reaproveitar o componente "Destructuring.js" e suas "Props" em App.js dentro da <div> usando o map:
+
+{cars.map((car) => (
+        <Destructuring //ESTOU RENDERIZANDO este COMPONENTE e suas "Props"
+        brand={car.brand} //ESSA "Props" DO "Destructuring" VAI RECEBER OS DADOS DO ARRAY const cars[] pelo loop map
+        km={car.km}
+        key={car.id} //SEMPRE QUE USAMOS ALGUM loop com o React temos que utilizar uma "key"
+        color={car.km} 
+        isNew={car.isNew} />
+      ))}
+
+* 3 passo, O componente "Destructuring" recebe os dados e verifica se o carro é NOVO, colocando tudo na lista:
+
+const Destructuring = ({brand, km, color, isNew}) => {
+  return (
+    <div>
+        <ul>
+            <li>marca: {brand}</li>
+            <li>Km: {km}</li>
+            <li>Cor: {color}</li>
+        </ul>
+        {isNew && <p>Este carro é NOVO</p>} //VERIFICA SE isNew É VERDADEIRO;
+    </div>
+  )
+}
+
+export default Destructuring;
+
+
+
+

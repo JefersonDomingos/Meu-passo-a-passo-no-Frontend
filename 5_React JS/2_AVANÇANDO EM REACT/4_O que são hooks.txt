@@ -1,0 +1,8 @@
+O QUE SÃO HOOKS
+
+1_ recursos do React JS que tem diversas funções;
+2_ como: guardar e alterar o estado de algum dado na nossa aplicação;
+3_ todos os hooks começam com 'use' por exemplo: 'useState' ;
+4_ podemos criar os nossos hooks, isso é chamado de 'custom hook';
+5_ os hooks precisam ser importados;
+6_ geralmente são uteis em todas as aplicações, utilizaremos diversas ao longo do curso.

@@ -1,0 +1,46 @@
+1_No React vamos também utilizar a tag form para formularios;
+
+2_As labels dos inputs contém o atributo " htmlFor ", que deve ter o valor do
+name do input;
+
+3_Não utilizamo "action", pois o processamento sera feito de forma assíncrona;
+
+Vamos criar um form!
+
+
+*** Crie 2 componentes um com o nome: MyForm.css e outro MyForm.js e importe o MyForm.js para o componente principal;
+
+***  MyForm.css: ////////////////////////////////////////////////////////////////////
+form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input, textarea, select {
+    display: block;
+    margin-top: 10px;
+}
+
+
+*** MyForm.js: ///////////////////////////////////////////////////////////////////////
+
+import "./MyForm.css"
+
+const MyForm = () => {
+  return (
+    <div>
+        <form>
+            <div>
+                <label htmlFor="name">Nome:</label>
+                <input type="text" name="name" placeholder="Digite seu nome" />
+            </div>
+            <input type="submit" value="enviar"/>
+        </form>
+    </div>
+  )
+}
+
+export default MyForm
+
+/////////////

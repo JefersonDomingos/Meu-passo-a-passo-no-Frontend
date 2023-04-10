@@ -1,0 +1,26 @@
+IMAGENS no React
+
+1__ A s imagens públicas do nosso projeto podem ficar na pasta públic;
+2__De lá elas podem ser chamadas pelas tags img diretamente pelo /nome.jpg;
+3__Pois a pasta public fica linkada com o src das imagens;
+
+
+VAMOS VER NA PRÁTICA
+1__ coloque uma imagem dentro da pasta públic e outra dentro da pasta src/assets
+2__ para usar a imagem em public veja abaixo:
+
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Avançando no React JS</h1>
+      {/*Usando a imagem na pasta public*/}
+      <img src="img1.jpg" alt="uma paisagem"/> //Imagem
+    </div>
+  );
+}
+
+export default App;
+
+

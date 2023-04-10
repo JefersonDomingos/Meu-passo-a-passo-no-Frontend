@@ -1,0 +1,58 @@
+1_ Previous State é um recurso que nos permite pegar o dado em seu valor original,
+dentro de um set de dado;
+
+2_ Isso é muito MUITO UTILIZADO PARA MODIFICAR LISTAS, pois temos um valor antigo e 
+transformamos em um valor novo;
+
+3_ O primeiro argumento de um set, sempre será o previous State;
+
+Vamos ver na prática:
+
+import React, { useState } from 'react';
+
+const ListRender = () => {
+
+  const [list] = useState(["Jéferson", "Lucas", "Matheus", "Thiago"]);
+  
+  const [users, setUsers] = useState([   // 1--- setUsers irá corresponder a users...
+    {id: 1, nome: "Jéferson", idade: 24}, 
+    {id: 2, nome: "Ludmila", idade: 18},
+    {id:3, nome: "Dionata", idade:21}
+  ])
+
+  const deleteRandom = () => {      // 2--- função para deletar...
+    const randomNumber = Math.floor(Math.random() * 4); //não vai passar de 3
+
+    setUsers((prevUsers) => {
+        
+      //vai renderizar no array [users] somente o que for diferente do número aleatório de "randomNumber".
+      return prevUsers.filter((user) => randomNumber !== user.id);
+    })
+  }
+  
+  return (                    
+    <div>
+       <ul>
+          {list.map((item,i) => (   //i é o index do método map();
+          
+            <li key={i}>{item}</li>
+          
+          ))}
+        </ul>
+        
+        <ul>
+          {users.map((user) => ( //o 'id' foi usado como 'key' para o <Li>;
+          
+            <li key={user.id}> 
+              {user.nome} - {user.idade}
+            </li> 
+        
+            ))}
+        </ul>
+        <button onClick={deleteRandom}>deletar</button>
+
+    </div>
+  )
+};
+
+export default ListRender;

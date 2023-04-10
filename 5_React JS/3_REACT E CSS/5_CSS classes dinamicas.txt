@@ -1,0 +1,54 @@
+1_ Podemos também aplicar lógica para mudar a classe de CSS de um
+elemento;
+
+2_ Também utilizaremos os IF ternário
+
+3_ Essa abordagem é mais interessante que o CSS inline;
+
+4_ Pois as classes estarão isoladas no arquivo de CSS, resolvendo o
+problema de organização de código;
+
+Vamos ver na pratica!
+
+*** Primeiro vamos criar uma const  corVermelha =  true;
+
+*** Vamos fazer uma lógica que a partir da const corVermelha, vai aplicar um estilo;
+
+*** vamos criar 2 classes no CSS global no caso o "index.css" 
+uma se chama red-title e outra default-title 
+
+*** A red-title tem  color: red e a default tem a color: blue;
+
+*** De acordo com a lógica vamos aplicar a classe.
+
+veja:
+
+import './App.css';
+
+function App() {
+
+  const corVermelha = true   //const para a lógica
+
+  return (
+    <div className="App">
+      
+      //Classes possíveis
+      <h1 className = {corVermelha ? "red-title" : "default-title"}>Classe dinamica para estilizar</h1>
+    </div>
+  )
+}
+
+export default App;
+
+
+/////////////index.css
+
+.red-title{
+  color:red;
+}
+
+.default-title{
+  color: aqua;
+}
+
+

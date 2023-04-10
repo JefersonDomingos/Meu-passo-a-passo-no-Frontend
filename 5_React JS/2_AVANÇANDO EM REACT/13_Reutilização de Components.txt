@@ -1,0 +1,40 @@
+1_ Com "Props" a reutilização de "componentes" começa a fazer muito sentido;
+
+2_ Se temos os dados de 1000 carros por exemplo, podemos reaproveitar o
+nosso CarDetails 1000 vezes;
+
+3_ Isso torna nosso código mais padronizado, facilitando a manutenção;
+
+Vamos ver na pratica!
+
+* VAMOS APROVEITAR O COMPONENTE "Destructuring":
+
+* veja que em App.js, temos o mesmo "componente" repetindo 3 vezes porém com "Props" diferentes:
+
+      <Destructuring brand="VW" km={10000} color="black" isNew={false}/>
+
+      <Destructuring brand="Chevrolet" km={20000} color="white" isNew={true}/>
+
+      <Destructuring brand="Fiat" km={0} color="blue" isNew={true}/>
+
+*  Dentro do próprio componente  "Destructuring.js" vamos exibir as "Props", veja:
+
+                         //OBJETO COM "Props"
+const Destructuring = ({brand, km, color, isNew}) => { 
+  return (
+    <div>
+        <ul>
+            <li>marca: {brand}</li>
+            <li>Km: {km}</li>
+            <li>Cor: {color}</li>
+        </ul>
+        {isNew && <p>Este carro é NOVO</p>}  //SE A PROPS isNew FOR {true} MOSTRAR "<p>Este carro é NOVO</p>"
+    </div>
+  )
+}
+
+export default Destructuring;
+
+
+
+

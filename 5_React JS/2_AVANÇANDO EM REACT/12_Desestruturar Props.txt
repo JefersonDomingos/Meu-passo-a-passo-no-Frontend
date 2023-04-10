@@ -1,0 +1,35 @@
+
+1_ E super comum passar mais de uma prop em um componente;
+
+2_ Para facilitar isso o React nos permite desestruturar as propriedades
+que chegam, com o recurso de destructuring;
+
+3_ Se temos duas props: name e age;
+
+4_ Podemos fazer assim function MyComponent({name, age})
+
+5_ Agora nao precisamos mais utilizar props.algumaCoisa;
+
+Vamos ver na Prática:
+
+
+* Em App.js passamos o componente "Destructuring"  com as suas "Props" lembrando que valor numérico fica dentro das {};
+e strings entre "":
+
+<Destructuring brand="VW" km={10000} color="black"/>
+
+* Já dentro do nosso componente "Destructuring"  vamos passar as Props que serão objetos {}, dentro dos parametros():
+                        //OBJETO COM AS "PROPS"
+const Destructuring = ({brand, km, color}) => {
+  return (
+    <div>
+        <ul>
+            <li>marca: {brand}</li> //USANDO OS VALORES DO OBJETO
+            <li>Km: {km}</li> //USANDO OS VALORES DO OBJETO
+            <li>Cor: {color}</li> //USANDO OS VALORES DO OBJETO
+        </ul>
+    </div>
+  )
+}
+
+export default Destructuring;

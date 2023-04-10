@@ -1,0 +1,61 @@
+1_ O CSS dinamico inline aplica estilo baseado em uma condicional;
+Vamos inserir no atributo um if ternário;
+
+2_ Dependendo da condição podemos mudar que regras de estilo um
+elemento recebe;
+
+Vamos ver na pratica!
+
+
+
+//////////////////////////////////////////////////Dinâmico usando uma const :
+
+*** primerio crie uma const v = 10;
+
+*** depois faça uma verificação lógica para definir uma cor para o <p>, veja abaixo:
+
+import './App.css';
+
+
+function App() {
+  
+  const v = 10;  /////const usada para a lógica
+  
+  return (
+    <div className="App">
+      ////////////////////////////// Abaixo estão as lógicas
+
+      <p style={v > 9 ? {color: "blue"} : {color: "red"} }>CSS inline dinamico usando uma const</p>
+      <p style={v > 11 ? {color: "blue"} : {color: "red"} }>CSS inline dinamico usando uma const</p>
+    </div>
+  );
+}
+
+export default App;
+
+
+///////////////////////////////////Dinâmico usando o "useState"
+
+App.js
+
+import './App.css';
+import {useState} from 'react' //O useState só está entre chaves é porque ele não é export default, é apenas export do react mesmo
+
+
+function App() {
+
+  const [numero] = useState(20) //valor do numero
+
+  return (
+    <div className="App">
+
+         /////////Lógica da estilização
+      <p style={numero === 20 ? {color: "blue"} : null }>Mudar a cor de acordo com o useState</p>
+    </div>
+  );
+}
+
+export default App;
+
+
+

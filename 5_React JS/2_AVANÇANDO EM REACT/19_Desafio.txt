@@ -1,0 +1,46 @@
+Imprimindo dados usando o loop 
+
+1_ Em App.js criei o "OBJETO" abaixo:
+
+const peoples = [
+    {id: 1, name: "Jéferson", idade: 24, prof: "Programador"},
+    {id:2, name: "Lucas", idade: 8, prof: "Não Trabalha"},
+    {id:3, name: "Dionata", idade: 21, prof: "Professor"}
+  ]
+  
+
+2_ Criei um componente chamado "UserDetails" para imprimir os dados, conferir idade e retornar se pode tirar CNH
+
+const UserDetails = ({name, idade, prof}) => {
+    return (
+        <div>
+            <ul>
+                <li>Nome: {name}</li>
+                <li>Profissão: {prof}</li>
+                <li>Idade: {idade}</li>
+            </ul>
+            {idade >= 18 ? <p>Pode tirar CHN </p> : <p>Não pode tirar CNH</p> }
+        </div>
+    )
+}
+
+export default UserDetails
+
+3_ Fiz um loop map() para passar cada "OBJETO" dentro do componente  "UserDetails", isso foi feito
+dentro da <div className="App"> em "App.js"
+
+      {peoples.map((people) => (
+        
+        <UserDetails  //componente 
+        
+        name = {people.name}
+        idade = {people.idade}
+        prof = {people.prof}
+        key = {people.id}
+        
+        /> //fechamento componente
+      
+      ))}
+
+
+

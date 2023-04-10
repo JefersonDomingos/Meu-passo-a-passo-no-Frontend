@@ -1,0 +1,33 @@
+1_ O inline style do React é igual o do CSS;
+
+2_ Por meio do atributo style conseguimos aplicar regras diretamente em
+um elemento
+
+3_ Devemos optar por outras maneiras de CSS, o inline pode dificultar a
+manutenção ou deixar o código imprevisivel em algumas situações;
+
+4_ Os valores são passados como objeto: <p style{{color:"blue", borderTop:"2px solid black"}}
+
+5_ palavras do tipo css border-top , agora será assim: borderTop
+
+Vamos ver na pratica!
+
+App.js /////////////////////////////////////
+
+import './App.css';
+
+
+function App() {
+  return (
+    <div className="App">
+      <p style={{color: "#000080", backgroundColor: "#800000"}}>Estilizando da forma "inline"</p>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+

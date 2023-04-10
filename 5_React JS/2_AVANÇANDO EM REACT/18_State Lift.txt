@@ -1,0 +1,72 @@
+1_ Elevação de State ou State Lift é quando um valor é elevado do componente "Filho"
+para o componente "Pai";
+
+2_ Geralmente temos um componente que "usa" o State e outro que o "Altera";
+
+3_ Então precisamos passar a alteração para o componente "Pai", e este passa para o
+componente que usa o "State";
+
+VAMOS VER NA PRÁTIA :)
+
+
+
+* Primeiro vamos criar um "State" e uma função para "troca-lo"
+
+ const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => { //muda a  mensagem
+      setMessage(msg); 
+  }
+
+
+*  Vamos criar um componente chamado "Message.js", que recebe a Props "msg" e a retorna dentro de um paragrafo
+
+const Message = ({msg}) => {
+    return (
+        <div>
+            <p>A mensagem é : {msg}</p>
+        </div>
+    )
+}
+
+
+* No componente principal que é o 'App.js' importe o componente "Message" e coloque ele dentro da <div> do App.js passando
+a Prop "msg" veja abaixo:
+
+<Message msg={message}/>         //esse {message} é o State que armazena a mensagem
+
+
+* Agora vamos criar um componente chamado "ChangeMessage" onde vão ficar os "States"
+Observe que temos a Prop "mudaState" que na verdade recebe a função  "handleMessage" :
+
+//dentro de App.js
+<ChangeMessage mudaState = {handleMessage}/>
+ 
+ const handleMessage = (msg) => { //função recebida
+      setMessage(msg);
+  }
+
+//////abaixo está o componente chamado "ChangeMessage"
+
+const ChangeMessage = ({mudaState}) => {
+    
+    const messages = ["Oi", "Olá", "Tudo bem?"]
+  
+  return (
+    <div>
+        <button onClick={() => mudaState(messages[0])}>1</button>
+        <button onClick={() => mudaState(messages[1])}>2</button>
+        <button onClick={() => mudaState(messages[2])}>3</button>
+    </div>
+  )
+}
+
+export default ChangeMessage
+
+
+
+*O componente "ChangeMessage" dentro do "App.js":
+
+<ChangeMessage mudaState = {handleMessage}/>
+
+

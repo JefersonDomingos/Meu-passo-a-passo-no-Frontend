@@ -1,0 +1,38 @@
+1_ Os 'React Fragments', são interessantes para quando precisamos ter mais de um
+elemento "Pai" em um componente;
+
+2_ Criamos uma tag vazia <> </> e dentro dela podemos colocar vários elementos;
+
+3_ E ela serve como elemento "Pai", não alterando a estrutura do HTML com uma <div>
+, por exemplo;
+
+Vamos ver na Prática :)
+
+
+* Primeiro crie um component chamado Fragments.js
+
+* veja como vai ficar o Fragments.js:
+
+
+const Fragments = () => {
+  return (
+    <>                         //tag vazia do Fragments
+        <h1>Testando o :</h1>
+        <h2>Fragments</h2>
+    </>                        //fechamaneto da tag vazia do Fragments
+  )
+}
+
+export default Fragments
+
+
+* Em App.js importamos e renderizamos o <Fragments>
+
+import Fragments from './components/Fragments';
+
+return ( 
+    <Fragments/>
+                );
+
+* Quando inspecionamos no "Navegador", vemos que o que está sendo "Renderizado" no "Fragments" vira elemento 
+filho da <div className= 'App'> e não de uma outra <div> abaixo dela.
