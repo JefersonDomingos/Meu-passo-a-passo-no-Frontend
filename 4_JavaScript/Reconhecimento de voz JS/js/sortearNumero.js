@@ -3,7 +3,6 @@ const maiorValorEl = document.getElementById("maior-valor");
 const menorValor = 1;
 const maiorValor = 1000;
 const numeroSorteado = sortearNumero();
-console.log(numeroSorteado);
 
 function sortearNumero (){
     return parseInt(Math.random() * maiorValor + 1);

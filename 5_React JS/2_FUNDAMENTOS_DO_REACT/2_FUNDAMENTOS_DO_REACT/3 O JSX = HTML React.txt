@@ -1,0 +1,24 @@
+JSX é o HTML do React;
+
+Onde vamos declarar as tags de HTML que serao exibidas no navegador;
+
+Ficam no return do componente;
+
+Temos algumas diferengas do HTML, por exemplo: class será className;
+
+Isso se da pelas instruções semelhantes de JS e HTML, pois o JSX é
+JavaScript, então algumas terão nomes diferentes;
+
+O JSX pode ter apenas um elemento pai veja abaixo:
+//funciona 
+<div className="ok">
+    <h1>Oi</h1>
+    <p>tudo bem?</p>
+</div>
+
+//não funciona
+    <h1>Oi</h1>
+    <p>tudo bem?</p>
+
+//Os erros do JSX não exibidos no console
+

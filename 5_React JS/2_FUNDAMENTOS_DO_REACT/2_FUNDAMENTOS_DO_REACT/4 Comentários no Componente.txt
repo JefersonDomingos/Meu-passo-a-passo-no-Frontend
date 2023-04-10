@@ -1,0 +1,25 @@
+Podemos inserir comentarios de duas maneiras no componente;
+
+Na parte da função, onde é executada a lógica, a sintaxe é: // Algum
+comentário;
+
+E também no JSX: {/*algum comentário*/}
+
+As chaves nos permitem executar sentenças em javascript,
+veremos isso mais adiante;
+
+Vamos testar os comentarios!
+
+const FirstComponent = () => {
+    //comentário no JavaScript
+    return(
+        <div>
+            {/*comentário no componente, lembrando que tem que ficar dentro da <div> que é nosso elemento PAI*/}
+            <h2> iiihuuuu meu primeiro componente bora pra cima</h2>
+        </div>
+    );
+}
+
+export default FirstComponent;
+
+

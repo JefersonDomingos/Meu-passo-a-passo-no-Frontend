@@ -1,0 +1,37 @@
+Quando as funções sao simples, podemos realizar a logica no próprio
+evento;
+
+Isso torna nossa código mais ‘complicado’, por atrelar logica com
+HTML
+
+Mas em algumas situações 6 aplicável;
+
+Vamos ver na pratica!
+
+Passo 1: vamos usar mesmo componente da aula 7, mas vamos usar uma função dentro do HTML veja:
+
+const Events = () =>{
+    
+    const imprimirNoConsole = () => {
+        console.log("O evento de click funcionou");
+    }
+    
+    return(
+        <div>
+            <button onClick={imprimirNoConsole}>Clique aqui</button>
+            <button onClick={(e) => console.log("Evento dentro do HTML")}>Evento no HTML</button> //ficaria mais confuso se a função precisasse ser maior
+        </div>
+    );
+};
+
+export default Events;
+
+//OBS funciona da mesma forma, o problema é quando a função do evento fosse maior ficaria ruim de se ler, por exemplo:
+
+<button onClick={(e) => {
+    if(2 <= 3){
+        console.log("É maior ou igual");
+    }else{
+        console.log("É menor");
+    }
+}}>Evento no HTML</button>

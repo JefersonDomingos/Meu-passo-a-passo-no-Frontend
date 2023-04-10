@@ -1,0 +1,63 @@
+Os componentes que criamos podem ser reutilizados em vários componentes;
+
+E ainda componentes PODEM FORMAR UMA HIERARQUIA, sendo importados uns
+dentro dos outros, como fizemos em App;
+
+Vamos ver na prática estes conceitos!
+
+Passo 1: na pasta components crie um arquivo chamado: MyComponent.js;
+
+Passo 2: Dentro do arquivo MyComponent escreva o seguinte código:
+
+const MyComponent = () => {
+    return(
+        <div>
+            <h3>Este é o MyComponent sendo reaproveitado
+                dentro de outro componente
+            </h3>
+        </div>
+    );
+};
+
+export default MyComponent;
+
+Passo 3: Agora precisamos importar esse componente para ser reutilizado:
+
+Vá na pasta components, abra o arquivo FirstComponent.js importe o MyComponent e coloque dentro do código,
+o MyComponent: 
+
+import MyComponent from "./MyComponent";
+
+const FirstComponent = () => {
+    return(
+        <div>
+            <h2> iiihuuuu meu primeiro componente bora pra cima</h2>
+            <MyComponent/> //componente reutilizado
+        </div>
+    );
+}
+
+export default FirstComponent;
+
+Passo 4: também podemos inportar esse componente no App.js, se quisermos veja:
+
+//components
+import FirstComponent from  "./components/FirstComponent";
+import TemplateExpressions from "./components/TemplateExpressions";
+import MyComponent from "./components/MyComponent";
+
+//styles /css
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+        <h1>Modulo-2</h1>
+        <FirstComponent />
+        <TemplateExpressions />
+        <MyComponent/> //Reutilizando aqui também
+    </div>
+  );
+}
+
+export default App;

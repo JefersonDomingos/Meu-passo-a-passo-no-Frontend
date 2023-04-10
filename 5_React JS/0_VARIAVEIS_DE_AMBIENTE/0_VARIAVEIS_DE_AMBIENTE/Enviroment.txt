@@ -1,0 +1,11 @@
+1_ crie na pasta raiz um arquivo .env;
+
+2_ nesse arquivo .env crie uma vairável, não esqueça que temos que usar REACT_APP no nome da variável;
+
+3_ REACT_APP_IDADE = 20   ///O nome REACT_APP_ deve estar sempre presente nas variáveis do .env
+
+4_ imprima no console.log(); abra o que retornar no console; verificando se a variável vai estar lá.
+
+5_ agora podemos armazenar o valor que está no .env em uma variável que usaremos:
+
+const idade = process.env.REACT_APP_IDADE

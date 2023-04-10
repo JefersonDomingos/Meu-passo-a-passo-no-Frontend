@@ -1,0 +1,40 @@
+Podemos criar funções que retornam JSX;
+
+Isso serve para criar situações que dependam de outras condições;
+
+Ou seja, o JSX a ser renderizado pode variar por alguma variável, por
+exemplo;
+
+Vamos ver na pratica!
+////////////////////
+
+Passo 1: Vá no Events.js, veja a função: renderizandoHtml(x){} e dentro da função Events escreva o código:
+
+const Events = () => {
+    
+    const imprimirNoConsole = () => {
+        console.log("O evento de click funcionou");
+    }
+
+    const renderizandoHtml = (x) => {
+
+        if(x){
+            return <h3>Renderizando HTML por um evento</h3>  //Será renderizado em HTML
+        }else{
+            return <h3>Renderizando!</h3> //Será renderizado em HTML
+        }
+    }
+    
+    return(
+        <div>
+            <button onClick={imprimirNoConsole}>Clique aqui</button>
+            <button onClick={() => console.log("Evento dentro do HTML")}>Evento no HTML</button>
+
+            <div> //os <h3> serão renderizados aqui.
+                {renderizandoHtml(true)} //Chamando a função e já executando pelos () parênteses.
+                {renderizandoHtml(false)}
+            </div>
+        </div>
+    );
+       
+};

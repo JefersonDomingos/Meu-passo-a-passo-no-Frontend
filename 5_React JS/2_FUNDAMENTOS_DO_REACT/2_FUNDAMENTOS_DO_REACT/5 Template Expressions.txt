@@ -1,0 +1,52 @@
+Template Expressions é o recurso que nos permite executar JS no JSX
+e também INTERPOLAR VARIÁVEIS;
+
+Isso será muito util ao longo dos seus projetos em React;
+
+A sintaxe é: {algumCódigoEmJS}
+
+Tudo que está entre CHAVES é processado em JavaScript e nos retorna 
+um resultado;
+
+Vamos ver na prática;
+
+Passo 1: crie um arquivo chamado TemplateExpressions.js na pasta components;
+
+Passo 2: dentro desse arquivo coloque o seguinte código: 
+
+const TemplateExpressions = () => {
+    const name = "Jéferson";
+    const data = {
+        age: 24,
+        job: "programmer"
+    }
+
+    return(
+        <div>
+            <h3>Olá, {name} tudo bem? você é {data.job}</h3>
+        </div>
+    );
+};
+
+export default TemplateExpressions;
+
+Passo 3: agora vá no arquivo App.js e importe o component TemplateExpressions assim: 
+
+import TemplateExpressions from "./components/TemplateExpressions"    //importando o componente
+
+Ainda dentro de App.js insira o componente no código abaixo:
+
+//styles /css
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+        <h1>Modulo-2</h1>
+        <FirstComponent />
+        <TemplateExpressions /> //importando o componente
+    </div>
+  );
+}
+
+export default App;

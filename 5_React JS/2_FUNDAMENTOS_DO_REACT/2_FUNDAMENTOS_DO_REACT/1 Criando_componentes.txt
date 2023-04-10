@@ -1,0 +1,25 @@
+Na maioria dos projetos os componentes ficam em uma pasta chamada
+components, que devemos criar;
+
+Geralmente sao nomeados com a camel case: FirstComponentjs;
+
+No arquivo criamos uma função, que contém o código deste componente
+(a lógica e o template);
+
+E também precisamos exportar esta fun¢ao, para reutiliza-lo;
+
+Vamos ver na pratica!
+
+Passo 1 crie uma pasta chamada: components e dentro dessa pasta crie um arquivo chamado FirstComponent.js 
+
+Passo 2 no arquivo FirstComponent.js crie o seguinte código: 
+
+const FirstComponent = () => {
+    return( //esse retorno sempre acontece
+        <div>
+            <h2>Primeiro componente</h2>
+        </div>
+    );
+}
+
+export default FirstComponent; //aqui exportamos o component para reutiliza-lo.
