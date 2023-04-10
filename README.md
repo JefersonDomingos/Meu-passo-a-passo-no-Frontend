@@ -14,13 +14,13 @@ Este repositório é a minha trilha de estudos de desenvolvimento Frontend
   - [X] Responsividade e Media queries
   - [ ] Pré Processadores(Sass, PostCSS)
 
-- [ ] JAVASCRIPT
-    - [ ] Lógica de programação e Sintaxe da Linguagem
-    - [ ] Manipulação de DOM
-    - [ ] JS Moderno (ES6+)
-    - [ ] Gerenciadores de pacotes, promises, consumo de APIs
+- [X] JAVASCRIPT
+    - [X] Lógica de programação e Sintaxe da Linguagem
+    - [X] Manipulação de DOM
+    - [X] JS Moderno (ES6+)
+    - [X] Gerenciadores de pacotes, promises, consumo de APIs
 
-- [ ] REACT JS
+- [X] REACT JS
     - [ ] Componentes
     - [ ] Ciclo de Vida
     - [ ] Hooks
