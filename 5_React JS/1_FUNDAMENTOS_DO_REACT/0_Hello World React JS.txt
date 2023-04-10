@@ -1,0 +1,14 @@
+Para criar o nosso Primeiro App com o REACT vamos aos comandos abaixo, abra o terminal e digite:
+npx create-react-app nomedoapp
+
+Após esse comando vão ser criados varios arquivos e pasta do react para executar o aplicativo web,
+
+Depois do processo anterior, veremos uma pasta com o nome que demos para a nossa aplicação, então 
+vamos acessa-la com o comando: cd nomedoapp,
+
+Caso apareça alguma pergunta digite y e de enter,
+
+Depois de termos acessado a pasta vamos dar o comando:
+npm start 
+
+Pronto, nossa aplicação vai ser executada no navegador e vai nos dar um endereço de IP para acessá-la.

@@ -1,6 +1,6 @@
 A importação é a maneira que temos de reutilizar o componente;
 
-Utilizamos a sintaxe: import X from ‘./components/X’ onde X 6 o nome
+Utilizamos a sintaxe: import X from ‘./components/X’ onde X é o nome
 do componente
 
 Para colocar o componente importado em outro componente, precisamos
@@ -12,7 +12,7 @@ Vamos importar o FirstComponent em App;
 
 Passo 1 vá em App.js e defina por um comentário onde vão ficar seus componentes;
 
-Passo 2 em App.js na parte de components use o seguinte código:
+Passo 2 em App.js na parte dos comentários de components use o seguinte código:
 import FirstComponent from  "./components/FirstComponent"  
 //O React já reconhece os arquivos JS, não precisamos especificar que o FirstComponent significa: FirstComponent.js 
 

@@ -11,15 +11,16 @@ E também precisamos exportar esta fun¢ao, para reutiliza-lo;
 Vamos ver na pratica!
 
 Passo 1 crie uma pasta chamada: components e dentro dessa pasta crie um arquivo chamado FirstComponent.js 
+OBS: A pasta ''componentes'' deve estar dentro da pasta ''src''
 
 Passo 2 no arquivo FirstComponent.js crie o seguinte código: 
 
-const FirstComponent = () => {
-    return( //esse retorno sempre acontece
+const FirstComponent = () => { //criando componente
+    return( 
         <div>
             <h2>Primeiro componente</h2>
         </div>
     );
 }
 
-export default FirstComponent; //aqui exportamos o component para reutiliza-lo.
+export default FirstComponent; //exportando o component para reutiliza-lo.
