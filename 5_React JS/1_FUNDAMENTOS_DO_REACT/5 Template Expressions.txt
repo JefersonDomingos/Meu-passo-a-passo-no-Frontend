@@ -17,7 +17,7 @@ Passo 2: dentro desse arquivo coloque o seguinte código:
 const TemplateExpressions = () => {
     const name = "Jéferson";
     const data = {
-        age: 24,
+        age: 25,
         job: "programmer"
     }
 

@@ -1,0 +1,24 @@
+NODE-MODULES: onde fica nossas dependencias do projeto em React;
+
+PUBLIC: pasta onde ficam os arquivos estáticos do React:
+como o index.html, as imagens e icones;
+
+SRC: onde ficam a pasta de componentes, o index.js, o app.js  e também os estilos de cada componente;
+
+O APP.js é o arquivo onde fica o codigo em REACT que estamos montando;
+
+O INDEX.js é o arquivo onde é renderizado o REACT no HTML que está na pasta PUBLIC;
+este arquivo pega a div ROOT do HTML e renderiza o código lá dentro.
+
+EXTENSÕES : 
+ES7+ REACT: facilita e agiliza a escrita de códigos em React js
+EMMET: facilita a escrita de códigos em HTML, pois escrevemos TAGS do HTML no REACT js
+
+ESTUDAR MELHOR:
+PRÁTICA: Para ser programador precisamos de muita prática;
+NÃO PULAR ETAPAS: Quando pulamos etapas, quebramos a cara lá na frente;
+EXERCICIOS: Precisamos desnvolver também a nossa mente e os exercícios nos ajudam com isso;
+NETWORKING: também é importante pois conseguimos tirar nossas dúvidas com outras pessoas;
+
+
+
