@@ -1,4 +1,4 @@
-Os eventos para 0 front-end são essenciais;
+Os eventos para o front-end são essenciais;
 
 Em varias situações vamos precisar do click, como ao enviar
 formulários
